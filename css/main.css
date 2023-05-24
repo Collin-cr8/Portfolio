@@ -94,16 +94,25 @@ textarea {
    /****** Global Styles ******/
 
 body {
-  font-family: 'Lekton', sans-serif;
+  font-family: 'Alike', sans-serif;
 }
 
 /****** Header Styles ******/
 
 
-h1{
+h1 {
   font-family:'Lexend Tera', sans-serif;
-  font-size: 30px;
-  
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Alata', sans-serif;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
   
 }
 
