@@ -28,26 +28,34 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <header class="homepage-hero">
+  <header>
     <div class="content-wrapper" >
         <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about"> About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul>
+          <ul>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#about"> About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>  
+          </ul>
         </nav>
-        <h1>Hello and Welcome!</h1>
-  
-        <h2>My name is <span> Collin Rhoten!</span> </h2>
-        <h3>I’m a front-end developer focused on building functional, responsive and beautiful User Interfaces and Experiences on the web.</h3>
-    
-      </div>
+        <div class="title">
+          <h1>Hello and Welcome!</h1>
+          <h2>My name is <span> Collin Rhoten!</span> </h2>
+          <h3>I’m a front-end developer focused on building functional, responsive and beautiful User Interfaces and Experiences on the web.</h3>
+        </div>
+    </div>
   </header>
        
   <main>
+    
       <section id="about">
         <div class="content-wrapper">
           <h2>A little about me</h2>
@@ -55,90 +63,91 @@
           <h3>Hi! I’m Collin and I’m a front-end developer based in Carrollton, TX with a passion for creating clean, beautiful things online that work!</h3>
                   
             <p>Growing up as a millennial and the youngest kid in the family, I was always the go-to person for any new tech that they couldn’t figure out or needed troubleshooting. 
-                I always loved playing around with devices and computers to see how they work and all of the different things that they were capable of. 
+              I always loved playing around with devices and computers to see how they work and all of the different things that they were capable of. 
             </p>
   
             <p>After graduating college and moving from Wisconsin to Texas during the pandemic, I spent a lot more time finding new things online. And finally, I began up pursuing 
-                a career path in web development and it has become something I love to dive into. The “Web Dev” World never stops evolving and therefore, I never have to stop learning! 
-                With every project completed, I learn new skills and get introduced to more tools that constantly keep me on top of my game and help to improve my coding abilities.
+              a career path in web development and it has become something I love to dive into. The “Web Dev” World never stops evolving and therefore, I never have to stop learning! 
+              With every project completed, I learn new skills and get introduced to more tools that constantly keep me on top of my game and help to improve my coding abilities.
             </p>
                   
             <p>When I’m not locked-in in front of my computer coding and learning, you’ll probably find me in the gym working to perfect my jumper or sunken in the couch playing 
-                video games and hanging out with my dogs!
+              video games and hanging out with my dogs!
             </p>
                   
             <p>Feel free to reach out, I can’t wait to get to work!</p>
         </div>
       </section>
-          
+    <article class="portfolio">      
       <section id="skills">
         <div class="content-wrapper">
           <h2>Skills</h2>
             <h3>Developer Skills</h3>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>JavaScript React</li>
-                <li>Flexbox & CSS Grid</li>
-                <li>Rest API's</li>
-                <li>Web Hosting</li>
-                <li>CLI</li>
-              </ul>
+              <div class="skill-wrapper">
+                <p class="skill">HTML5</p>
+                <p class="skill">CSS</p>
+                <p class="skill">JavaScript</p>
+                <p class="skill">JavaScript React</p>
+                <p class="skill">Flexbox & CSS Grid</p>
+                <p class="skill">Rest API's</p>
+                <p class="skill">Web Hosting</p>
+                <p class="skill">Responsive Web Development</p>
+                <p class="skill">Git & GitHub</p>
+              </div>
                <br>
             <h3>Tech Tools</h3>
-              <ul>
-                <li>GitHub</li>
-                <li>Visual Studio Code</li>
-                <li>Code Sandbox</li>
-                <li>Chrome DevTools</li>
-              </ul>
+              <div class="tool-wrapper">
+                <p class="tool">GitHub</p>
+                <p class="tool">Visual Studio Code</p>
+                <p class="tool">Code Sandbox</p>
+                <p class="tool">Chrome DevTools</p>
+              </div>
         </div>
       </section>
 
       <section id="projects">
         <div class="content-wrapper">
           <h2>Projects</h2>
-              <div class="previous-project">
-                <a href="https://collin-cr8.github.io/Super-Sticky-Notes/" target="_blank" >
-                  <img src="../Portfolio/img/Super-Sticky-Notes-img.png" alt="Super Sticky Notes App Project" />
-                </a>
-                  <h3>Super Sticky Notes</h3>
-                    <p>Super handy Sticky note app built with JavaScript React that allows you to make as many notes 
-                      as you need! The app uses JavaScript React lifecycle methods to make sure notes are stored when the user reloads the page.
-                    </p>
-              </div>
-              <div class="previous-project">
+            <div class="previous-project">
+              <a href="https://collin-cr8.github.io/Super-Sticky-Notes/" target="_blank" >
+                <img src="../Portfolio/img/Super-Sticky-Notes-img.png" alt="Super Sticky Notes App Project" />
+              </a>
+              <h3>Super Sticky Notes</h3>
+                <p>Super handy Sticky note app built with JavaScript React that allows you to make as many notes 
+                  as you need! The app uses JavaScript React lifecycle methods to make sure notes are stored when the user reloads the page.
+                </p>
+            </div>
+            <div class="previous-project">
                 <a href="https://collin-cr8.github.io/206-unplugged/" target="_blank" id="image">
-                    <img src="../Portfolio/img/unplugged-img.png" alt="Unplugged Website Project" />
+                  <img src="../Portfolio/img/unplugged-img.png" alt="Unplugged Website Project" />
                 </a>
-                  <h3>Unplugged</h3>
-                    <p>A multipage website built from a design comparison, for a tech industry retreat that uses mobile responsive design. 
-                      The site features a Google Map integration and responsive elements to create a clean, informative site functional on 
-                      all mobile, tablet and computer devices.
-                    </p>
-              </div>
-              <div class="previous-project">
-                <a href="https://collin-cr8.github.io/js-guess-the-word/" target="_blank" id="image">
-                  <img src="../Portfolio/img/Guess-the-word-img.png" alt="Guess the Word Game" />
-                </a>
-                  <h3>Guess the Word Game</h3>
-                    <p> A fun and interactive game built with JavaScript and a JSON file. Try to guess the word before your guesses run out.
-                      Win or lose, play as many times as you like!
-                    </p>
-              </div>
-              <div class="previous-project">
-                <a href="https://collin-cr8.github.io/js-github-repo-gallery/" target="_blank" >
-                  <img src="../Portfolio/img/Repo-gallery-img.png" alt="GitHub Repository Gallery" />
-                </a>
-                  <h3>GitHub Repo Gallery</h3>
-                    <p>Gallery of my personal GitHub repositories with functionality to go between GitHub profile and main gallery. 
-                      Automatically adds any new repos on my profile using rest API’s and JavaScript.
-                    </p>
-              </div>
-
-        </div>
-      </section>
+                <h3>Unplugged</h3>
+                  <p>A multipage website built from a design comparison, for a tech industry retreat that uses mobile responsive design. 
+                    The site features a Google Map integration and responsive elements to create a clean, informative site functional on 
+                    all mobile, tablet and computer devices.
+                  </p>
+            </div>
+            <div class="previous-project">
+              <a href="https://collin-cr8.github.io/js-guess-the-word/" target="_blank" id="image">
+                <img src="../Portfolio/img/Guess-the-word-img.png" alt="Guess the Word Game" />
+              </a>
+                <h3>Guess the Word Game</h3>
+                  <p> A fun and interactive game built with JavaScript and a JSON file. Try to guess the word before your guesses run out.
+                    Win or lose, play as many times as you like!
+                  </p>
+            </div>
+            <div class="previous-project">
+              <a href="https://collin-cr8.github.io/js-github-repo-gallery/" target="_blank" >
+                <img src="../Portfolio/img/Repo-gallery-img.png" alt="GitHub Repository Gallery" />
+              </a>
+                <h3>GitHub Repo Gallery</h3>
+                  <p>Gallery of my personal GitHub repositories with functionality to go between GitHub profile and main gallery. 
+                    Automatically adds any new repos on my profile using rest API’s and JavaScript.
+                  </p>
+            </div>
+          </div>
+        </section>
+      </article>
   </main>
   
       <footer id="contact">

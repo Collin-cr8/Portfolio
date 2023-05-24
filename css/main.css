@@ -93,14 +93,37 @@ textarea {
 
 body {
   font-family: 'Alike', sans-serif;
+  font-size: 1em;
+  background-color: white;
+  color: #152A3E;
+  margin: 0;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #CAC691;
+}
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
 }
 
 /****** Header Styles ******/
+
+header {
+  background-color: #152A3E;
+  color: #CAC691;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
 
 h1 {
   font-family:'Lexend Tera', sans-serif;
@@ -125,6 +148,9 @@ h3 {
 
 /******* Project Styles *******/
 
+.projects body {
+  background-color: #152A3E;
+}
 
 
 /****** Contact FooterStyles ******/
