@@ -104,6 +104,17 @@ ul {
   padding: 0;
 }
 
+header,
+#projects,
+#skills,
+#about,
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: row wrap;
+}
+
 a {
   color: #CAC691;
   text-decoration: none;
@@ -125,6 +136,14 @@ h3 {
   margin: 0;
 }
 
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
 p {
   margin: 0;
 }
@@ -132,16 +151,6 @@ p {
 
 /****** Header Styles ******/
 
-header,
-#projects,
-#skills,
-#about,
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: row wrap;
-}
 
 header {
   padding: 0 0 60 0px;
@@ -172,13 +181,18 @@ nav ul li a {
 
 h1 {
   font-family:'Lexend Tera', sans-serif;
-  font-size: 40px;
+  font-size: 45px;
   width: 100%;
 }
 
 h2 {
-  font-family: 'Alata', sans-serif;
-  font-size: 32px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 25px;
+  width: 100%;
+}
+
+header h2 {
+  color: #E9B14C;
 }
 
 h3 {
