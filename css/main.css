@@ -87,12 +87,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
    
-
-
+*::before,
+*::after {
+  box-sizing: border-box;
+}
  /****** Global Styles ******/
 
 body {
-  font-family: 'Alike', sans-serif;
+  font-family: 'Alata', sans-serif;
   font-size: 1em;
   background-color: white;
   color: #152A3E;
@@ -151,11 +153,13 @@ p {
 span {
   font-weight: bolder;
   font-size: 1.15rem;
-  font-family: 'Alike', sans-serif;
+  font-family: 'Alata', sans-serif;
 }
 
 img {
   filter: drop-shadow(5px 5px 5px);
+  /*box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;*/
+
 }
 
 #skills,
@@ -229,6 +233,7 @@ figure {
 #skills h3 {
   margin: 0 0 30px 0;
   font-weight: 800;
+  text-decoration: underline;
 }
 
 #projects h3 {
@@ -253,6 +258,7 @@ figure {
 }
 /****** Main Styles ******/
 
+/*skills & tools*/
 #skills {
   padding-top: 40px;
 }
@@ -262,16 +268,32 @@ figure {
   width:100%;
 }
 
+.project-link,
+.skill-wrapper p,
+.tool-wrapper p {
+  text-transform: uppercase;
+  color: #152A3E;
+  font-family: 'Alata', sans-serif;
+  font-size: 1rem;
+}
+
+/*projects*/
+
+article {
+  background-color: #CAC691;
+}
+
 #projects {
   padding-top: 0px;
 }
-
 
 .port-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
+  gap:25px;
+
 }
 
 .previous-project {
@@ -280,29 +302,26 @@ figure {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 10px 20px;
+  border: 3px solid #E9B14C;
+  border-radius: 15px;
 }
 
-.project-link,
-.skill-wrapper p,
-.tool-wrapper p {
-  text-transform: uppercase;
-  color: #152A3E;
-  font-family: 'Alike', sans-serif;
-  font-size: 1rem;
+.previous-project:hover {
+  transform: scale(1.05);
 }
 
-article {
-  background-color: #CAC691;
-}
+
 
 #projects p {
   text-align: left;
   width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .previous-project img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
 
 .project-description {
@@ -315,19 +334,26 @@ article {
   padding: .75rem 3.75rem;
   border-radius: 30px;
   margin: 40px 0 30px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .project-link:hover {
   background-color: #152A3E;
   color: #CAC691;
+  transform: scale(1.2);
 }
 
+/*about*/
 .about-wrapper figure {
   padding: 30px 0 40px 0;
 }
 
 #about {
   padding: 0 0 40px 0;
+}
+
+#about p {
+  font-family: 'Lexend Deca', sans-serif;
 }
 /****** Contact Footer Styles ******/
 
@@ -371,14 +397,13 @@ footer .follow-social {
   justify-content: center;
 }
 
-footer .contact-info .follow-social .icons {
+footer .icons {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 footer ul {
-  width:100%;
+  width:60%;
 }
 
 footer .icons li {
@@ -387,7 +412,6 @@ footer .icons li {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 footer .icons li i {
   font-size: 1.875rem;
