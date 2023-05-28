@@ -91,6 +91,96 @@ textarea {
 *::after {
   box-sizing: border-box;
 }
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px; 
+  --foreground: #E9B14C;
+  --background: #CAC691;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --slow-timing: 800ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 
+  + var(--hamburger-gap) *2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width 
+  var(--animation-timing), rotate var(--animation-timing),
+   translate var(--slow-timing), background-color var(--animation-timing);
+}
+
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.navigation {
+  /*Modify this in Media Queries so sidebar doesnt take up whole screen*/
+  transition: translate var(--slow-timing);
+  translate: -150%; 
+  padding: 10px;
+  margin-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  width: 100%;
+  border-radius: 30px;
+
+}
+
+.hamburger-menu:has(input:checked) + .navigation {
+  translate:0;
+}
  /****** Global Styles ******/
 
 body {
@@ -170,6 +260,7 @@ img {
 }
 /****** Header Styles ******/
 
+/*NAV TRIAL*/
 
 header {
   padding: 0 0 60px 0px;
@@ -178,7 +269,7 @@ header {
 }
 
 nav {
-  margin: 0 0 60px 0;
+  margin: 8px 0 8px 0;
 }
 nav ul {
   display: flex;
@@ -187,10 +278,9 @@ nav ul {
   
 }
 header nav ul li {
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   font-weight: bolder;
   background-color: #E9B14C;
-  padding: 8px 8px;
   border-radius: 30px;
 }
 nav ul li a {
@@ -280,7 +370,7 @@ figure {
 /*projects*/
 
 article {
-  background-color: #CAC691;
+  background-color: rgb(202, 198, 145);
 }
 
 #projects {
@@ -305,6 +395,8 @@ article {
   padding: 10px 20px;
   border: 3px solid #E9B14C;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
 
 .previous-project:hover {
