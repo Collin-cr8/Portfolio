@@ -210,7 +210,6 @@ footer {
 a {
   color: #CAC691;
   text-decoration: none;
-  font-weight: bold;
 }
 
 img {
@@ -229,13 +228,22 @@ h3 {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-family:'Lexend Tera', sans-serif;
+  font-size: 45px;
+  width: 100%;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 30px;
+  font-family: 'Lexend Tera', sans-serif;
+  width: 100%;
 }
 
+h3 {
+  font-size: 22px;
+  font-family: 'Alata', sans-serif;
+  width: 100%;
+}
 p {
   margin: 0;
 }
@@ -246,10 +254,14 @@ span {
   font-family: 'Alata', sans-serif;
 }
 
+figure {
+  margin: 20px 0 40px 0;
+}
+
 img {
   filter: drop-shadow(5px 5px 5px);
+  border-radius: 15px;
   /*box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;*/
-
 }
 
 #skills,
@@ -260,10 +272,8 @@ img {
 }
 /****** Header Styles ******/
 
-/*NAV TRIAL*/
-
 header {
-  padding: 0 0 60px 0px;
+  padding: 0 0 10px 0px;
   background-color: #152A3E;
   color: #CAC691;
 }
@@ -288,20 +298,9 @@ nav ul li a {
   
 }
 
-h1 {
-  font-family:'Lexend Tera', sans-serif;
-  font-size: 45px;
-  width: 100%;
-}
-
-h2 {
-  font-family: 'Lexend Tera', sans-serif;
-  font-size: 25px;
-  width: 100%;
-}
-
 header h2 {
-  color: #E9B14C;
+  /*color: #E9B14C;*/
+  color:#EEEFDA;
 }
 
 header h3 {
@@ -309,11 +308,12 @@ header h3 {
   font-size: 1.25rem; 
 }
 
-figure {
-  margin: 20px 0 40px 0;
-}
-.previous-project h3 {
-  margin: 0 0 40px 0;
+/****** Main Styles ******/
+
+/*skills & tools*/
+#skills {
+  padding-top: 50px;
+  background-color: #EEEFDA;
 }
 
 #skills h2 {
@@ -323,34 +323,7 @@ figure {
 #skills h3 {
   margin: 0 0 30px 0;
   font-weight: 800;
-  text-decoration: underline;
-}
-
-#projects h3 {
-  font-size: 1.3rem;
-}
-
-#about h2 {
-  padding-bottom: 20px;
-}
-
-#contact h2 {
-  font-size:x-large;
-  font-weight: bolder;
-  padding-bottom: 30px;
-}
-
-#contact h3 {
-  font-size: larger;
-  font-weight: bold;
-  color:#E9B14C;
-  padding: 20px 0 20px 0;
-}
-/****** Main Styles ******/
-
-/*skills & tools*/
-#skills {
-  padding-top: 40px;
+  font-size: 22px;
 }
 
 .skills,
@@ -367,7 +340,26 @@ figure {
   font-size: 1rem;
 }
 
+.skill-wrapper p,
+.tool-wrapper p {
+  background-color: #E9B14C;
+  border-radius: 30px;
+  padding: 15px 0;
+  margin: 20px 0;
+  width: 80%;
+  position: relative;
+  left: 28px
+}
+
 /*projects*/
+
+#projects h3 {
+  font-size: 22px;
+}
+
+.previous-project h3 {
+  margin: 0 0 40px 0;
+}
 
 article {
   background-color: rgb(202, 198, 145);
@@ -396,14 +388,12 @@ article {
   border: 3px solid #E9B14C;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
+  background-color: #EEEFDA;
 }
 
 .previous-project:hover {
   transform: scale(1.05);
 }
-
-
 
 #projects p {
   text-align: left;
@@ -413,7 +403,7 @@ article {
 
 .previous-project img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
+  border-radius: 15px;
 }
 
 .project-description {
@@ -436,16 +426,24 @@ article {
 }
 
 /*about*/
-.about-wrapper figure {
-  padding: 30px 0 40px 0;
+
+#about h2 {
+  padding-bottom: 20px;
 }
 
 #about {
   padding: 0 0 40px 0;
+  background-color: #EEEFDA;
 }
 
 #about p {
   font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.5em;
+}
+
+#about .about-span {
+  font-family: 'Alata', sans-serif;
+  font-size: 25px;
 }
 /****** Contact Footer Styles ******/
 
@@ -465,6 +463,19 @@ footer .contact-wrapper {
   padding: 20px 0 40px 0;
 }
 
+#contact h2 {
+  font-size:x-large;
+  font-weight: bolder;
+  padding-bottom: 30px;
+}
+
+#contact h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color:#E9B14C;
+  padding: 20px 0 20px 0;
+}
+
 .contact-info {
   display: flex;
   justify-content: center;
@@ -480,8 +491,8 @@ footer .follow-social {
 }
 footer .contact-info {
   width: 60%;
+  margin-bottom: 20px;
 }
-
 
 footer .follow-social {
   display: flex;
@@ -507,6 +518,14 @@ footer .icons li {
 }
 footer .icons li i {
   font-size: 1.875rem;
+}
+
+footer p,
+footer a {
+  font-family: 'Lexend Deca', sans-serif;
+}
+.copyright {
+  margin-top: 70px;
 }
 
 /* ==========================================================================
