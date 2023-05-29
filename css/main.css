@@ -86,7 +86,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   
+
 *::before,
 *::after {
   box-sizing: border-box;
@@ -95,14 +95,13 @@ textarea {
 :root {
   --bar-width: 60px;
   --bar-height: 8px;
-  --hamburger-gap: 6px; 
+  --hamburger-gap: 6px;
   --foreground: #E9B14C;
   --background: #CAC691;
   --hamburger-margin: 8px;
   --animation-timing: 200ms ease-in-out;
   --slow-timing: 800ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 
-  + var(--hamburger-gap) *2);
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) *2);
 }
 
 .hamburger-menu {
@@ -134,9 +133,8 @@ textarea {
   background-color: var(--foreground);
   border-radius: 999px;
   transform-origin: left center;
-  transition: opacity var(--animation-timing), width 
-  var(--animation-timing), rotate var(--animation-timing),
-   translate var(--slow-timing), background-color var(--animation-timing);
+  transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing),
+    translate var(--slow-timing), background-color var(--animation-timing);
 }
 
 
@@ -168,7 +166,7 @@ textarea {
 .navigation {
   /*Modify this in Media Queries so sidebar doesnt take up whole screen*/
   transition: translate var(--slow-timing);
-  translate: -150%; 
+  translate: -150%;
   padding: 10px;
   margin-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
   background-color: var(--foreground);
@@ -178,10 +176,11 @@ textarea {
 
 }
 
-.hamburger-menu:has(input:checked) + .navigation {
-  translate:0;
+.hamburger-menu:has(input:checked)+.navigation {
+  translate: 0;
 }
- /****** Global Styles ******/
+
+/****** Global Styles ******/
 
 body {
   font-family: 'Alata', sans-serif;
@@ -223,12 +222,12 @@ img {
 
 h1,
 h2,
-h3 { 
+h3 {
   margin: 0;
 }
 
 h1 {
-  font-family:'Lexend Tera', sans-serif;
+  font-family: 'Lexend Tera', sans-serif;
   font-size: 45px;
   width: 100%;
 }
@@ -244,6 +243,7 @@ h3 {
   font-family: 'Alata', sans-serif;
   width: 100%;
 }
+
 p {
   margin: 0;
 }
@@ -270,6 +270,7 @@ img {
 #contact {
   margin: 0;
 }
+
 /****** Header Styles ******/
 
 header {
@@ -281,31 +282,33 @@ header {
 nav {
   margin: 8px 0 8px 0;
 }
+
 nav ul {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  
+
 }
+
 header nav ul li {
   font-size: 1.25rem;
   font-weight: bolder;
   background-color: #E9B14C;
   border-radius: 30px;
 }
+
 nav ul li a {
   color: #152A3E;
-  
+
 }
 
 header h2 {
-  /*color: #E9B14C;*/
-  color:#EEEFDA;
+  color: #EEEFDA;
 }
 
 header h3 {
   font-family: 'Alata', sans-serif;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
 }
 
 /****** Main Styles ******/
@@ -328,9 +331,16 @@ header h3 {
 
 .skills,
 .tools {
-  width:100%;
+  width: 100%;
 }
 
+.skill-wrapper,
+.tool-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 .project-link,
 .skill-wrapper p,
 .tool-wrapper p {
@@ -347,8 +357,7 @@ header h3 {
   padding: 15px 0;
   margin: 20px 0;
   width: 80%;
-  position: relative;
-  left: 28px
+  position: static;
 }
 
 /*projects*/
@@ -374,7 +383,7 @@ article {
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
-  gap:25px;
+  gap: 25px;
 
 }
 
@@ -445,6 +454,7 @@ article {
   font-family: 'Alata', sans-serif;
   font-size: 25px;
 }
+
 /****** Contact Footer Styles ******/
 
 footer {
@@ -460,19 +470,26 @@ footer .contact-wrapper {
 }
 
 #contact {
-  padding: 20px 0 40px 0;
+  padding: 20px 0 60px 0;
+}
+
+.connect-span {
+  color:#EEEFDA;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 24px;
 }
 
 #contact h2 {
-  font-size:x-large;
+  font-size: x-large;
   font-weight: bolder;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+  line-height: 1.5em;
 }
 
 #contact h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  color:#E9B14C;
+  color: #EEEFDA;
   padding: 20px 0 20px 0;
 }
 
@@ -489,6 +506,7 @@ footer .follow-social {
   align-items: center;
   flex-flow: row wrap;
 }
+
 footer .contact-info {
   width: 60%;
   margin-bottom: 20px;
@@ -506,26 +524,32 @@ footer .icons {
 }
 
 footer ul {
-  width:60%;
+  width: 60%;
 }
 
 footer .icons li {
   width: 40px;
   height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  
 }
+
 footer .icons li i {
-  font-size: 1.875rem;
+  font-size: 2.8rem;
 }
 
 footer p,
 footer a {
   font-family: 'Lexend Deca', sans-serif;
+  color: #EEEFDA;
 }
+
 .copyright {
   margin-top: 70px;
+  margin-bottom: 40px;
+  color:#CAC691;
 }
 
 /* ==========================================================================
@@ -614,14 +638,463 @@ footer a {
                              Media Queries 
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
-  /* Tablet Styles */
+@media only screen and (min-width:768px) {
+  /*Tablet styles here*/
+
+  /* Global styles */
+  .content-wrapper {
+    max-width: 640px;
+  }
+
+  header {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  footer {
+    padding: 140px 0;
+  }
+
+  h2 {
+    margin-top: 35px;
+    margin-bottom: 80px;
+  }
+
+  /*-------Main Tablet Styles--------*/
+
+  /* header */
+
+  header .content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  header nav ul li {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 45px;
+  }
+
+  .title h2 {
+    font-size: 35px;
+  }
+
+  .title h3 {
+    font-size: 27px;
+    max-width: 80%;
+  }
+
+  /*Skills & Tools*/
+ 
+  #skills {
+    padding-top: 80px;
+    margin: 0;
+    padding-bottom: 80px;
+  }
+  
+  #skills h2 {
+    margin-bottom: 40px;
+  }
+
+  #skills h3 {
+    margin: 40px 0 20px 0;
+    font-size: 25px;
+  }
+
+  .skill-wrapper,
+  .tool-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-flow: row wrap;
+    text-transform: uppercase;
+  }
+
+  .skill-wrapper p,
+  .tool-wrapper p {
+    /*  width: auto; */
+    width: 45%;
+    position: static;
+    font-size: 1.17rem;
+  }
+
+  .skill-wrapper p,
+  .tool-wrapper p {
+    padding: 15px 0;
+  }
+  /* Projects */
+
+  #projects {
+    padding-top: 80px;
+  }
+
+  #projects h3 {
+    font-size: 25px;
+  }
+  #projects p {
+    font-size: 20px;
+  }
+  span {
+    font-size: 24px;
+  }
+  .port-wrapper {
+    justify-content: space-around;
+
+  }
+
+  .port-header {
+    margin: 0 0 60px 0;
+    font-size: 35px;
+  }
+
+  .previous-project {
+    width: 40.5%;
+    align-items: center;
+    height: 765px;
+    margin-bottom: 80px;
+  }
+
+  .previous-project h3 {
+    margin-bottom: 30px;
+  }
+
+  .project-description {
+    width: 95%;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .project-link {
+    margin: 40px 0 30px 0;
+    font-size: 20px;
+  }
+
+  
+
+  /* about */
+
+  .about-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  #about {
+    padding: 80px 0;
+  }
+
+  .about-info h2 {
+    margin: 60px 0;
+  }
+
+  .about-info h3 {
+    margin: 0 0 40px 0;
+  }
+
+  #about figure {
+    width: 70%;
+  }
+
+  .about-info h2 {
+    font-size: 35px;
+    padding: 0;
+  }
+
+  .about-info h3 {
+    font-size: 25px;
+  }
+
+  .about-info p {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+  }
+
+
+  /* Footer */
+  
+  #contact h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+
+  #contact h3 {
+    margin: 0 0 30px 0;
+    font-size: 30px;
+  }
+
+  .connect-span {
+    font-size: 35px;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-info {
+    margin: 40px 0;
+  }
+
+  footer p,
+  footer a {
+    font-size: 20px;
+  }
+
+  footer .contact-info {
+    width: 33%;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  footer .icons {
+    justify-content: space-evenly;
+  }
+
+  footer .icons li i {
+    font-size: 2.8rem;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
+}
+
+/*---------END of TABLET MQ---------------*/
+
+
+
+
+@media only screen and (min-width:1024px) {
+
+  /* added for landscape tablets and iPad Pro */
+  .content-wrapper {
+    max-width: 900px;
+  }
+
+  .about-info h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+
+  /*Desktop styles here*/
+  .content-wrapper {
+    max-width: 1450px;
+  }
+
+  /* font styles */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  .about-info h3 {
+    font-size: 3.75rem;
+    text-align: left;
+  }
+
+  .about-info h4 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .project-link,
+  .language-wrapper p,
+  .tool-wrapper p {
+    font-size: 1rem;
+  }
+
+  /* element margins */
+  /* the list element have 20px of bottom margin already */
+  header {
+    padding-top: 80px;
+    padding-bottom: 140px;
+  }
+
+  nav {
+    margin-bottom: 80px;
+  }
+
+  #work {
+    padding-top: 80px;
+  }
+
+  #skills {
+    padding-bottom: 120px;
+  }
+
+  #about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  footer {
+    padding: 140px 0 140px 0;
+  }
+
+  h2 {
+    margin: 40px 0 0 0;
+  }
+
+  .portfolio-header {
+    margin: 0 0 60px 0;
+  }
+
+  .project-description {
+    margin: 0 0 30px 0;
+  }
+
+  .project-link {
+    margin: 40px 0 80px 0;
+  }
+
+  #skills {
+    padding-top: 120px;
+  }
+
+  #skills .content-wrapper {
+    max-width: 900px;
+  }
+
+  .skills-header {
+    margin-bottom: 40px;
+  }
+
+  .about-info h3 {
+    margin: 0;
+  }
+
+  .about-info h4 {
+    margin: 40px 0;
+  }
+
+  .about-text {
+    margin: 0 0 30px 0;
+  }
+
+  .contact-info {
+    margin: 80px 0 80px 0;
+  }
+
+  .contact-title {
+    margin: 0 0 30px 0;
+  }
+
+  /* header */
+  header .content-wrapper {
+    justify-content: flex-end;
+  }
+
+  header nav {
+    justify-content: flex-end;
+    width: 45%;
+  }
+
+  nav ul li a {
+    padding: 10px 10px;
+  }
+
+  nav ul li a:hover,
+  nav #contact-link:hover {
+    background-color: #F8C6C6;
+    color: #453E4F;
+    padding: 10px 10px;
+    border-radius: 30px;
+  }
+
+  .home-title {
+    max-width: 95%;
+  }
+
+  .home-title h2 {
+    max-width: 70%;
+  }
+
+  /* portfolio */
+  .home-portfolio-piece {
+    width: 30%;
+  }
+
+  /* skills */
+  .skill,
+  .tool {
+    width: 30%;
+  }
+
+  /* about */
+  .about-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about figure {
+    width: 35%;
+    margin-top: 0;
+  }
+
+  .about-info {
+    width: 58%;
+  }
+
+  /* contact */
+  footer .content-wrapper {
+    max-width: 70%;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
+  }
 }
 
 
-@media only screen and (min-width: 1200px) {
-  /* Desktop Styles */
-}
 
 
 /* ==========================================================================
@@ -631,6 +1104,7 @@ footer a {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -698,4 +1172,3 @@ footer a {
     page-break-after: avoid;
   }
 }
-
