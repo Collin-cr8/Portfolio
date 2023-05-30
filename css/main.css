@@ -1163,6 +1163,7 @@ footer a {
 
   .previous-project {
     width: 30%;
+    height: 820px;
   }
 
   .port-header {
@@ -1208,7 +1209,7 @@ footer a {
   }
 
   .about-info h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     text-align: left;
     margin: 0;
   }
@@ -1217,6 +1218,11 @@ footer a {
     font-size: 2rem;
     font-weight: lighter;
     margin: 10px 0 40px 0;
+  }
+
+  .about-wrapper #center {
+    display: flex;
+    text-align: center;
   }
 
   .about-info p {
