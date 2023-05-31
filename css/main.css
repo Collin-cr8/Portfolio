@@ -330,7 +330,6 @@ header h3 {
 }
 
 #skills .content-wrapper {
-  width: 100%;
   height: 650px;
   position: relative;
   user-select: none;
@@ -1134,10 +1133,6 @@ footer a {
     margin-right: 0;
   }
 
-  #skills .content-wrapper {
-    max-width: 900px;
-  }
-
   #skills h3 {
     margin-top: 0;
     margin-bottom: 40px;
@@ -1153,8 +1148,12 @@ footer a {
     background-color: #EEEFDA;
   }
 
+  .skill-wrapper {
+    animation: move 10s linear 2s infinite alternate;
+  }
+
   .tool-wrapper {
-    animation: slow-move 5s linear 2s infinite alternate;
+    animation: slow-move 15s linear 2s infinite alternate;
   }
   
   .ability-wrap::before,
@@ -1162,12 +1161,10 @@ footer a {
   .ability-wrap::before,
   .ability-wrap::after {
     height: 90%;
+    width: 5%;
+  }
 
   /* Projects */
-
-  #projects {
-    padding-top: 80px;
-  }
 
   .previous-project {
     width: 30%;
