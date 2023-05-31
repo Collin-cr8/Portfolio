@@ -334,6 +334,7 @@ header h3 {
   height: 650px;
   position: relative;
   user-select: none;
+  overflow: hidden;
 }
 
 .skill-wrapper {
