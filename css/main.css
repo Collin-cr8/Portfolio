@@ -1129,6 +1129,8 @@ footer a {
   #skills {
     padding-bottom: 60px;
     padding-top: 100px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #skills .content-wrapper {
@@ -1153,7 +1155,12 @@ footer a {
   .tool-wrapper {
     animation: slow-move 5s linear 2s infinite alternate;
   }
-
+  
+  .ability-wrap::before,
+  .ability-wrap::after,
+  .ability-wrap::before,
+  .ability-wrap::after {
+    height: 90%;
 
   /* Projects */
 
