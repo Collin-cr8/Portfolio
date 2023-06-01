@@ -844,7 +844,7 @@ footer a {
     height: 70%;
     min-width: 180px;
     background: #E9B14C;
-    padding: 15px 20px;
+    padding: 5px 40px;
     width: 40%;
     font-size: 1.17rem;
 
@@ -1127,6 +1127,7 @@ footer a {
 
   /* Skills & Tools */
   #skills {
+    background-color: #EEEFDA;
     padding-bottom: 60px;
     padding-top: 100px;
     margin-left: 0;
@@ -1143,17 +1144,33 @@ footer a {
     margin-bottom: 30px;
   }
 
-  #skills {
-    padding-top: 100px;
-    background-color: #EEEFDA;
+  .skill {
+    padding: 5px 60px;
   }
-
   .skill-wrapper {
-    animation: move 10s linear 2s infinite alternate;
+    animation: move 15s linear 2s infinite alternate;
   }
 
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-1800px + 90%));
+    }
+  }
+  @keyframes slow-move {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-1200px + 100%));
+    }
+  }
   .tool-wrapper {
-    animation: slow-move 15s linear 2s infinite alternate;
+    animation: slow-move 10s linear 2s infinite alternate;
   }
   
   .ability-wrap::before,
