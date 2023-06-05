@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -164,7 +165,6 @@ textarea {
 }
 
 .navigation {
-  /*Modify this in Media Queries so sidebar doesnt take up whole screen*/
   transition: translate var(--slow-timing);
   translate: -150%;
   padding: 10px;
@@ -261,7 +261,6 @@ figure {
 img {
   filter: drop-shadow(5px 5px 5px);
   border-radius: 15px;
-  /*box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;*/
 }
 
 #skills,
@@ -516,6 +515,9 @@ article {
 
 /*about*/
 
+#about {
+  text-align: left;
+}
 #about h2 {
   padding-bottom: 20px;
 }
@@ -717,6 +719,14 @@ footer a {
 /* ==========================================================================
                              Media Queries 
    ========================================================================== */
+
+
+@media (prefers-reduced-motion:reduce) {
+  .skill-wrapper,
+  .tool-wrapper {
+    animation: none;
+  }
+}
 
 @media only screen and (min-width:768px) {
   /*Tablet styles here*/
@@ -1039,8 +1049,6 @@ footer a {
 
 
 @media only screen and (min-width:1024px) {
-
-  /* added for landscape tablets and iPad Pro */
   .content-wrapper {
     max-width: 900px;
   }
