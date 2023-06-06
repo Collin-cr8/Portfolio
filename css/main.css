@@ -186,7 +186,7 @@ body {
   font-family: 'Alata', sans-serif;
   font-size: 1em;
   background-color: white;
-  color: #152A3E;
+  color: rgb(21, 42, 62);
 }
 
 ul {
@@ -316,6 +316,7 @@ header h3 {
 #skills {
   padding-top: 50px;
   background-color: #EEEFDA;
+  height: 1100px;
 }
 
 #skills h2 {
@@ -332,7 +333,7 @@ header h3 {
   height: 650px;
   position: relative;
   user-select: none;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skill-wrapper {
@@ -357,26 +358,26 @@ header h3 {
 
 .skill,
 .tool {
-  border-radius: 30px;
-  margin: 20px 10px;
+  margin: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  height: 70%;
-  min-width: 180px;
-  background: #E9B14C;
-  padding: 5px 20px;
+  height: 40%;
+  min-width: 100px;
+  padding: 5px 0px;
 }
 
 .skill-img p i,
 .tool-img p i {
-  font-size: 75px;
+  font-size: 60px;
 }
 
 .skill-name,
 .tool-name {
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -384,32 +385,14 @@ header h3 {
   font-family: 'Alata', sans-serif;
   font-size: 17px;
   font-weight: bold;
+  background: #E9B14C;
+  border-radius: 30px;
 }
 
-.ability-wrap::before,
-.ability-wrap::after,
-.ability-wrap::before,
-.ability-wrap::after {
-  content: '';
-  width: 10%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  filter: blur(40px);
-}
-
-.ability-wrap::before,
-.ability-wrap::before {
-  left: 0;
-  background: rgba(245, 245, 245, 0.6);
-}
-
-.ability-wrap::after,
-.ability-wrap::after {
-  right: 0;
-  background: rgba(245, 245, 245, 0.6);
-}
+.skill-name li,
+  .tool-name li {
+    padding-top: 5px;
+  }
 
 @keyframes move {
   0% {
@@ -417,7 +400,7 @@ header h3 {
   }
 
   100% {
-    transform: translateX(calc(-1500px + 100%));
+    transform: translateX(calc(-800px + 100%));
   }
 }
 
@@ -427,7 +410,7 @@ header h3 {
   }
 
   100% {
-    transform: translateX(calc(-1000px + 100%));
+    transform: translateX(calc(-600px + 100%));
   }
 }
 
@@ -724,7 +707,9 @@ footer a {
 @media (prefers-reduced-motion:reduce) {
   .skill-wrapper,
   .tool-wrapper {
+    overflow: hidden;
     animation: none;
+    
   }
 }
 
@@ -820,7 +805,7 @@ footer a {
     user-select: none;
     margin-bottom: 80px;
     padding-bottom: 140px;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .skill-wrapper {
@@ -831,6 +816,7 @@ footer a {
     height: 20vh;
     min-height: 200px;
     animation: move 15s linear 2s infinite alternate;
+    overflow: visible;
   }
 
   .tool-wrapper {
@@ -840,7 +826,7 @@ footer a {
     width: 100%;
     height: 5vh;
     min-height: 200px;
-    animation: slow-move 10s linear 2s infinite alternate;
+
   }
 
   .skill,
@@ -851,13 +837,10 @@ footer a {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    height: 70%;
+    height: 50%;
     min-width: 180px;
-    background: #E9B14C;
-    padding: 5px 40px;
     width: 40%;
     font-size: 1.17rem;
-
   }
 
   .skill-img p i,
@@ -867,6 +850,8 @@ footer a {
 
   .skill-name,
   .tool-name {
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -876,25 +861,18 @@ footer a {
     font-weight: bold;
   }
 
+  
+
   @keyframes move {
     0% {
       transform: translateX(0);
     }
 
     100% {
-      transform: translateX(calc(-1450px + 100%));
+      transform: translateX(calc(-1750px + 100%));
     }
   }
 
-  @keyframes slow-move {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(calc(-950px + 100%));
-    }
-  }
 
   /* Projects */
 
