@@ -704,15 +704,6 @@ footer a {
    ========================================================================== */
 
 
-@media (prefers-reduced-motion:reduce) {
-  .skill-wrapper,
-  .tool-wrapper {
-    overflow: hidden;
-    animation: none;
-    
-  }
-}
-
 @media only screen and (min-width:768px) {
   /*Tablet styles here*/
 
@@ -795,17 +786,14 @@ footer a {
   #skills {
     padding-top: 50px;
     background-color: #EEEFDA;
+    height: 1250px;
   }
 
   #skills .content-wrapper {
     width: 100%;
     margin: 0 5px 0 6px;
-    height: 650px;
-    position: relative;
-    user-select: none;
     margin-bottom: 80px;
     padding-bottom: 140px;
-    overflow: visible;
   }
 
   .skill-wrapper {
@@ -826,7 +814,8 @@ footer a {
     width: 100%;
     height: 5vh;
     min-height: 200px;
-
+    animation: slow-move 15s linear 2s infinite alternate;
+    overflow: visible;
   }
 
   .skill,
@@ -872,7 +861,15 @@ footer a {
       transform: translateX(calc(-1750px + 100%));
     }
   }
-
+  @keyframes slow-move {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-900px + 100%));
+    }
+  }
 
   /* Projects */
 
@@ -1025,7 +1022,7 @@ footer a {
   }
 }
 
-
+/*Tablet Landscape*/
 @media only screen and (min-width:1024px) {
   .content-wrapper {
     max-width: 900px;
@@ -1118,6 +1115,7 @@ footer a {
     padding-top: 100px;
     margin-left: 0;
     margin-right: 0;
+    height: 1100px;
   }
 
   #skills h3 {
@@ -1133,8 +1131,9 @@ footer a {
   .skill {
     padding: 5px 60px;
   }
-  .skill-wrapper {
-    animation: move 15s linear 2s infinite alternate;
+ 
+  .tool-wrapper {
+    animation: slow-move 10s linear 2s infinite alternate;
   }
 
   @keyframes move {
@@ -1155,9 +1154,7 @@ footer a {
       transform: translateX(calc(-1200px + 100%));
     }
   }
-  .tool-wrapper {
-    animation: slow-move 10s linear 2s infinite alternate;
-  }
+ 
   
   .ability-wrap::before,
   .ability-wrap::after,
@@ -1258,8 +1255,19 @@ footer a {
   }
 }
 
+/********* End of Desktop MQ *************/
 
 
+/****** Accessibility MQ *******/
+
+@media (prefers-reduced-motion:reduce) {
+  .skill-wrapper,
+  .tool-wrapper {
+    overflow: hidden;
+    animation: none;
+    
+  }
+}
 
 /* ==========================================================================
    Print styles.
