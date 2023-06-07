@@ -275,7 +275,7 @@ img {
 header {
   padding: 0 0 10px 0px;
   background-color: #152A3E;
-  color: #CAC691;
+  color: rgb(202, 198, 145);
 }
 
 nav {
@@ -381,11 +381,11 @@ header h3 {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: #152A3E;
+  color: rgb(21, 42, 62);
   font-family: 'Alata', sans-serif;
   font-size: 17px;
   font-weight: bold;
-  background: #E9B14C;
+  background: rgb(233, 177, 76);
   border-radius: 30px;
 }
 
